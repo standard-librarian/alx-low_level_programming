@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * print_rev - a version of the c slen
+ * rev_string - reverse a string
  * @s: pointer to the sing
  * Return: void
  */
