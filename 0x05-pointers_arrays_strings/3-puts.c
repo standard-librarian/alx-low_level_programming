@@ -2,7 +2,7 @@
 
 /**
  * _puts - a version of the c strlen
- * @s: pointer to the string
+ * @str: pointer to the string
  * Return: void
  */
 void _puts(char *str)
