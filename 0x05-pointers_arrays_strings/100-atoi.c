@@ -13,7 +13,6 @@ int *_atoi(char *s)
 		num *= 10;
 		num += (int) (*(s + i) - '0');
 	}
-//	num *= (-2 * (neg % 2 - 0.5));
 
 	return (p);
 }
