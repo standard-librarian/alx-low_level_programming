@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 
+
 int _atoi(char *s)
 {
 	int i, neg = 0, num = 0;
