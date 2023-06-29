@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <limits.h>
 
+/**
+ * _atoi - converts a string to an integer
+ *
+ * @s: string input parameter
+ *
+ * Return: converted integer from string
+*/
 
 int _atoi(char *s)
 {
@@ -14,7 +21,7 @@ int _atoi(char *s)
 
 	for (; *(s + i) >= '0' && *(s + i) <= '9'; i++)
 		num = num * 10 + (*(s + i) - '0');
-	
+
 	num *= (-2 * (neg % 2 - 0.5));
-	return (num > INT_MIN?num:INT_MIN);
+	return (num);
 }
