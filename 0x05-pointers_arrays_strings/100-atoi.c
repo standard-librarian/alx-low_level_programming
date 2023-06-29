@@ -1,7 +1,7 @@
 int *_atoi(char *s)
 {
 	int i, neg, num = 0;
-	int *p = &num;
+	int *p = num;
 
 	for (i = 0; *(s + i) < '0' || *(s + i) > '9'; i++)
 	{
