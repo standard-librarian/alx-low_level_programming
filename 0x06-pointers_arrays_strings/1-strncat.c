@@ -6,6 +6,7 @@
  *
  * @dest: pointer to destnation input
  * @src: pointer to source input
+ * @n: number
  *
  * Return: pointer to resulting string @dest
 */
