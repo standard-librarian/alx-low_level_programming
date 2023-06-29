@@ -1,6 +1,8 @@
-int *_atoi(char *s)
+#include <stdio.h>
+
+int _atoi(char *s)
 {
-	int i, neg = 0, num = 0, *p = &num;
+	int i, neg = 0, num = 0;
 
 	for (i = 0; *(s + i) < '0' || *(s + i) > '9'; i++)
 	{
@@ -8,13 +10,12 @@ int *_atoi(char *s)
 			neg++;
 	}
 
-	for (; *(s + i) > '0' && *(s + i) < '9'; i++)
+	for (; *(s + i) >= '0' && *(s + i) <= '9'; i++)
 	{
 		num *= 10;
 		num += (*(s + i) - '0');
 	}
 	
 	num *= (-2 * (neg % 2 - 0.5));
-
-	return (p);
+	return (num);
 }
