@@ -16,7 +16,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	for (i = 0; *(src + i) != '\0' && i < n; i++)
 		*(dest + i) = *(src + i);
-	*(dest + l + i) = '\0';
+	*(dest + i) = '\0';
 	return (dest);
 
 }
@@ -33,7 +33,7 @@ int main(void)
 	char s2[] = "0123456789";
 
 	printf("%d\n", (int) strlen(s1));
-	char *p = _strncpy(s1, s2);
+	char *p = _strncpy(s1, s2, 5);
 
 	printf("%d\n", (int) strlen(p));
 	puts(p);
