@@ -1,6 +1,6 @@
 int *_atoi(char *s)
 {
-	int i, neg, num = 0;
+	int i, neg = 0, num = 0, *p = &num;
 
 	for (i = 0; *(s + i) < '0' || *(s + i) > '9'; i++)
 	{
@@ -15,5 +15,5 @@ int *_atoi(char *s)
 	}
 	num *= (-2 * (neg % 2 - 0.5));
 
-	return (&num);
+	return (p);
 }
