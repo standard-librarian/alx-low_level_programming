@@ -14,5 +14,5 @@ int _atoi(char *s)
 		num = num * 10 + (*(s + i) - '0');
 	
 	num *= (-2 * (neg % 2 - 0.5));
-	return (num);
+	return (num > INT_MIN?num:INT_MIN);
 }
