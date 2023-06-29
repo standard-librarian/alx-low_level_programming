@@ -11,10 +11,7 @@ int _atoi(char *s)
 	}
 
 	for (; *(s + i) >= '0' && *(s + i) <= '9'; i++)
-	{
-		num *= 10;
-		num += (*(s + i) - '0');
-	}
+		num = num * 10 + (*(s + i) - '0');
 	
 	num *= (-2 * (neg % 2 - 0.5));
 	return (num);
