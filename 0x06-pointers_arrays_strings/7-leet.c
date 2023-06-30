@@ -8,16 +8,22 @@
 
 char *leet(char *s)
 {
-	int i;
-	char smol[] = "4bcd3fghijk1mn0pqrs7uvwxyz";
-	char big[]  = "4BCD3FGHIJK1MNOPQRS7UVWXYZ";
+	int i, c = 0;
+	int sl[] = {97, 101, 111, 116, 108};
+	int ul[] = {65, 69, 79, 84, 76};
+	int n[] = {52, 51, 48, 55, 49};
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (s[c] != '\0')
 	{
-		if (s[i] >= 'a' || s[i] <= 'z')
-			s[i] = smol[s[i] - 'a'];
-		else
-			s[i] = big[s[i] - 'A'];
+		for (i = 0; i < 5; i++)
+		{
+			if (s[c] == sl[i] || s[c] == ul[i])
+			{
+				s[c] = n[i];
+				break;
+			}
+		}
+		c++;
 	}
 	return (s);
 }
