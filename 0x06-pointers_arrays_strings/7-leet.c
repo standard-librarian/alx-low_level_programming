@@ -9,18 +9,15 @@
 char *leet(char *s)
 {
 	int i;
-	char leet_alphabet[] = "4   3      1  0    7      ";
+	char smol[] = "4bcd3fghijk1mn0pqrs7uvwxyz";
+	char big[]  = "4BCD3FGHIJK1MNOPQRS7UVWXYZ";
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == 'A' || s[i] == 'a'
-				 || s[i] == 'E' || s[i] == 'e'
-				 || s[i] == 'L' || s[i] == 'l'
-				 || s[i] == 'T' || s[i] == 't'
-				 || s[i] == 'O' || s[i] == 'o')
-		{
-			s[i] = leet_alphabet[i];
-		}
+		if (s[i] >= 'a' || s[i] <= 'z')
+			s[i] = smol[s[i] - 'a'];
+		else
+			s[i] = big[s[i] - 'A'];
 	}
 	return (s);
 }
