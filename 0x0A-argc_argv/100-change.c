@@ -14,9 +14,12 @@ int main(int argc, char *argv[])
 {
 	int change = 0, cents;
 
-	if(!(argc == 2))
+	if(argc != 2)
+	{
+		printf("Error\n");
 		return (1);
-	
+	}
+
 	cents = atoi(argv[1]);	
 	change += (cents / 25);
 	cents %= 25;
