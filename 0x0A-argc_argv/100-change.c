@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return 0;
 	}
-	change += (cents / 25);
+/*	change += (cents / 25);
 	cents %= 25;
 	change += (cents / 10);
 	cents %= 10;
@@ -35,6 +35,21 @@ int main(int argc, char *argv[])
 	change += (cents / 2);
 	cents %= 2;
 	change += (cents);
+	*/
+	while (cents > 0)
+	{
+		if (cents >= 25)
+			cents -= 25;
+		else if (cents >= 10)
+			cents -= 10;
+		else if (cents >= 5)
+			cents -= 5;
+		else if (cents >= 2)
+			cents -= 2;
+		else if (cents >= 1)
+			cents -= 1;
+		coins_number += 1;
+	}
 	printf("%d\n", change);
 	return (0);
 }
