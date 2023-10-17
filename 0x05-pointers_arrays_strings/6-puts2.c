@@ -1,34 +1,21 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * puts2 - a version of the c strlen
- * @str: pointer to the string
- * Return: void
+ * puts2 - prints every other character of a string.
+ *@str: the string to use.
  */
+
 void puts2(char *str)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
 		if (i % 2 == 0)
-			putchar(str[i]);
+		{
+			_putchar(str[i]);
+		}
+		i++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
-
-#ifdef TEST
-/**
- * main - test main function, gets called from the bash cmd "gcc -DTEST"
- * Return:§Always 0
- */
-int main(void)
-{
-	char s1[] = "Hello, world!\n";
-	char s2[] = "Hello, world\n";
-
-
-	puts2(s1);
-	puts2(s2);
-}
-#endif

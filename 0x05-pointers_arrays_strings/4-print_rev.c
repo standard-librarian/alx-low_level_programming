@@ -1,31 +1,24 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
 
 /**
- * print_rev - a version of the c slen
- * @s: pointer to the sing
- * Return: void
+ * print_rev - print a string in reverse.
+ *
+ *@s: the string to print in reverse.
+ *
  */
+
 void print_rev(char *s)
 {
-	int i;
+	int i = 0;
+	int length;
 
-	for (i = strlen(s) - 1; i >= 0; i--)
+	for (length = 0; s[length] != '\0'; length++)
 	{
-		putchar(s[i]);
 	}
-	putchar('\n');
-}
 
-#ifdef TEST
-/**
- * main - test main function, gets called from the bash cmd "gcc -DTEST"
- * Return:§Always 0
- */
-int main(void)
-{
-	char s[] = "Hello, world!\n";
-
-	print_rev(s);
+	for (i = length - 1; i >= 0; i--)
+	{
+		_putchar(s[i]);
+	}
+	_putchar('\n');
 }
-#endif

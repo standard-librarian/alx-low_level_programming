@@ -1,14 +1,19 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * swap_int - change the value of the var pointed to by n
- * @a: pointer to int
- * @b: pointer to int
- * Return: void
+ * swap_int - swap the value of two integers.
+ *
+ * @a: first integer.
+ * @b: second integer.
+ *
  */
+
 void swap_int(int *a, int *b)
 {
-	int tmp = *a;
+	int c;
+
+	c = 0;
+	c = *a;
 	*a = *b;
-	*b = tmp;
+	*b = c;
 }

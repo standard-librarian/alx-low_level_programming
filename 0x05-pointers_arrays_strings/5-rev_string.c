@@ -1,34 +1,30 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
 
 /**
- * rev_string - reverse a string
- * @s: pointer to the sing
- * Return: void
+ * rev_string - reverse a string.
+ *
+ *@s: the string to be reversed.
  */
+
 void rev_string(char *s)
 {
-	int i;
-	char tmp;
+	int length, j, i;
+	char v1, v2;
 
-	for (i = 0; i < (int)  strlen(s) / 2; i++)
+	for (length = 0; s[length] != '\0'; length++)
 	{
-		tmp = s[i];
-		s[i] = s[strlen(s) - 1 - i];
-		s[strlen(s) - 1 - i] = tmp;
+	}
+
+	j = length - 1;
+	i = 0;
+
+	while (j > i)
+	{
+		v1 = s[i];
+		v2 = s[j];
+		s[i] = v2;
+		s[j] = v1;
+		j--;
+		i++;
 	}
 }
-
-#ifdef TEST
-/**
- * main - test main function, gets called from the bash cmd "gcc -DTEST"
- * Return:§Always 0
- */
-int main(void)
-{
-	char s[] = "Hello, world!\n";
-
-	rev_string(s);
-	printf("%s\n", s);
-}
-#endif

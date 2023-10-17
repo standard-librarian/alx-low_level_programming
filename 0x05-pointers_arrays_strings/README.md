@@ -1,1 +1,1 @@
-0x05-pointers_arrays_strings
+# Pointers, Arrays and Strings in C

@@ -1,29 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * _strlen - a version of the c strlen
- * @s: pointer to the string
- * Return: int, the length of the string
+ * _strlen - calculate the length of a string.
+ *
+ * @s: the string to calculate it's length.
+ * Return: length of a string.
  */
+
 int _strlen(char *s)
 {
 	int i;
+	int length = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
-		;
-
-	return (i);
+	{
+		length++;
+	}
+	return (length);
 }
-
-#ifdef TEST
-/**
- * main - test main function, gets called from the bash cmd "gcc -DTEST"
- * Return:§Always 0
- */
-int main(void)
-{
-	char s[] = "Hello, world!";
-
-	printf("%d\n", _strlen(s));
-}
-#endif

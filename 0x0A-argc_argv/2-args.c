@@ -1,21 +1,18 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
- * main - check the code
- *
- * @argc: counter of the cli args
- * @argv: the vector of the cli args
+ * main - Prints all arguments it receives.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
  *
  * Return: Always 0.
  */
-
 int main(int argc, char *argv[])
 {
-	int i;
+	int arg;
 
-	for (i = 0; i < argc; i++)
-		printf("%s\n", argv[i]);
+	for (arg = 0; arg < argc; arg++)
+		printf("%s\n", argv[arg]);
 
 	return (0);
 }

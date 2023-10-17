@@ -3,8 +3,9 @@
 #include <stdio.h>
 
 /**
- * main - This is the entry point
- * Return: 0 if the main runs successfully
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -12,12 +13,13 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf("%d ", n);
-	if (n > 0)
-		puts("is positive");
+
+	if (n == 0)
+		printf("%d is zero\n", n);
 	else if (n < 0)
-		puts("is negative");
+		printf("%d is negative\n", n);
 	else
-		puts("is zero");
+		printf("%d is positive\n", n);
+
 	return (0);
 }
